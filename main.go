@@ -1,12 +1,14 @@
 package main
 
-import (
-  "fmt"
-)
-
 func main() {
-  p := newPerson("Joe", "Doe")
-  fmt.Println(p.firstName, p.lastName)
+	joe := newPerson("Joe", "Doe")
 
-  p.printName()
+	joe.printName()
+
+	jane := newPersonWithContact("Jane", "Doe", "janedoe@mail,com", 1123414)
+
+	jane.printWithContact()
+	jane.updateFirstName("Lisa")
+	jane.printWithContact()
+
 }
